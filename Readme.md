@@ -1,1 +1,1 @@
-Porjeto completo de jornal para trabalho escolar 
+Projeto completo de site jornalistico para trabalho escolar 
