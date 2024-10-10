@@ -46,10 +46,32 @@
             </nav>
 
             @yield('content')
-        <footer>
-            <p>
-                Bruna &copy; 2024 
-            </p>
+        <footer class="bg-dark text-light py-4">
+            <div class="container px-4">
+                <div class="row">
+                   <div class="col col-lg-4">
+                        <h3>Jornal Escolar</h3>
+                        <p>Site desenvolvido por Bruna Dadonas</p>
+                        <p>Envolvidos no projeto: Ana Julia, Rafaela, Andriene e Leticia</p>
+                       
+                   </div>
+
+                 
+
+                   <div class="col col-lg-3">
+                    <h3>Curso</h3>
+                        <p>Técnico Em Administração</p>
+                   </div>
+                </div>
+
+                <hr>
+                        <div>
+                            <p>Progect No Name &copy 2024</p>
+                        </div>
+
+             
+            </div>
+          
         </footer>
                     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
