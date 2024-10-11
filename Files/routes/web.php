@@ -17,3 +17,4 @@ use App\Http\Controllers\NewsController;
 
 Route::get('/', [NewsController::class, 'index']);
 Route::get('/news/create', [NewsController::class, 'create']);
+Route::post('/news', [NewsController::class, 'store']);

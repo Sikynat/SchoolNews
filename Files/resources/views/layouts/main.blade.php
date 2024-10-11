@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -34,6 +36,9 @@
                       <a class="nav-link " aria-current="page" href="/news/create">Publicar</a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link " aria-current="page" href="#">Cadastrar</a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link " aria-current="page" href="#">Login</a>
                     </li>
                 </ul>
@@ -46,6 +51,7 @@
             </nav>
 
             @yield('content')
+
         <footer class="bg-dark text-light py-4">
             <div class="container px-4">
                 <div class="row">
