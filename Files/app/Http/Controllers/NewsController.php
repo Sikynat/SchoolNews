@@ -27,6 +27,16 @@ class NewsController extends Controller
 
         $news->title = $request->title;
         $news->essay = $request->essay;
+        // Image Upload
+
+        if($request->hasFile('image') && $request->file('image')->isValid()) {
+
+            $requestImage = $request->image;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now"));
+            $request->image->move(public_path('img/news'), $imageName);
+            $news->image = $imageName;
+        }
 
         $news->save();
 
