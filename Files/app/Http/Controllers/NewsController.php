@@ -11,6 +11,10 @@ use App\Models\News;
 class NewsController extends Controller
 {
 
+    public function boot(){
+        \Blade::setEchoFormat('nl2br(e(%s))');
+    }
+
     public function index() {
         $news = News::all();
         return view('welcome', ['news' => $news]);
@@ -41,5 +45,13 @@ class NewsController extends Controller
         $news->save();
 
         return redirect('/');
+
     }
+
+    public function show($id){
+        $news = News::findOrFail( $id );
+        return view('news.show', ['news' => $news]);
+    }
+
+
 }

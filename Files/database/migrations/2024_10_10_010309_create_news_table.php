@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
 
-            $table->string('title', 100);
-            $table->text('essay');
+            $table->string('title', 100)->default('Titulo Indefinido');
+            $table->text('essay')->default('Texto Indefinido');
 
             $table->timestamps();
             

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('news', function (Blueprint $table) {
             //
-            $table->string('image');
+            $table->string('image')->default('/nfound/undefined.png');
         });
     }
 
