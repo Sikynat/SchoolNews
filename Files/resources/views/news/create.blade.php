@@ -13,16 +13,16 @@
         @csrf
             <div class="form-group p-1">
                 <label for="title">Titulo</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Titulo Da Matéria">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Titulo Da Matéria" required>
             </div>
             <div class="form-group p-1">
                 <label for="title">Redação</label>
-                <textarea class="form-control" name="essay" id="essay" cols="30" rows="10"></textarea>
+                <textarea class="form-control" name="essay" id="essay" cols="30" rows="10" required></textarea>
             </div>
 
             <div class="form-group p-1">
                 <label for="image">Imagem da matéria</label>
-              <input type="file" id="image"  name="image" class="from-control-file">
+              <input type="file" id="image"  name="image" class="from-control-file ">
             </div>
             
             <input type="submit" class="btn btn-primary " value="Publicar">

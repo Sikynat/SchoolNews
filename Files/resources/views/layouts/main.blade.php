@@ -47,9 +47,9 @@
                         <a class="nav-link " aria-current="page" href="#">Login</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form action="/" method="GET" class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="search" id="search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                     </div>
                 </div>

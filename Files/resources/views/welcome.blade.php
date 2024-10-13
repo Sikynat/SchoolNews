@@ -7,10 +7,18 @@
 
    
     <div class="container py-5">
-    <h1>Veja as principais noticias</h1>
+        
+
+        @if($search)
+        <h2>Buscando por: {{ $search }}</h2>
+        @else
+        <h1>Veja as principais noticias</h1>
+        @endif
+    
       
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-        @foreach($news as $news)
+
+        @forelse ($news as $news)
            <div class="col">
            
             <div class="card">
@@ -29,8 +37,18 @@
           
             
         </div>
-        @endforeach
+        @empty
+        <div class="">
+            <p>Nenhuma notícia encontrada</p>
+            <div>
+                <img src="/img/news/nfound/undefinedN.png" width="500px"  alt="">
+            </div>
+        </div>
+            
+        @endforelse
 
+
+      
         </div>
         
     </div>

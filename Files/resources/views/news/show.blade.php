@@ -7,7 +7,7 @@
 <div class="container">
     <h1>{{ $news->title }}</h1>
         <figure class="figure">
-             <img src="/img/news/{{ $news->image }}"  width="800"  class="figure-img img-fluid rounded" alt="...">
+             <img src="/img/news/{{ $news->image }}"  width="400"  class="figure-img img-fluid rounded" alt="...">
          <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
     </figure>
 
