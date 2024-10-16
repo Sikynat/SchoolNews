@@ -12,7 +12,7 @@
         @if($search)
         <h2>Buscando por: {{ $search }}</h2>
         @else
-        <h1>Veja as principais noticias</h1>
+        <h1>Veja as principais notícias</h1>
         @endif
     
       

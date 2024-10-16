@@ -37,15 +37,32 @@
                         <li class="nav-item">
                             <a class="nav-link " aria-current="page" href="/">Home</a>
                         </li>
+
+                        @auth
                         <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="/news/create">Publicar</a>
                         </li>
+
                         <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">Cadastrar</a>
+                        <a class="nav-link " aria-current="page" href="/dashboard">Meus Posts</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <form action="/logout" method="post">
+                        @csrf
+                        <a href="/logout" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+                        </form>
+                        @endauth
+                       
+
+                        @guest
+                        <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="register">Cadastrar</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">Login</a>
+                        <a class="nav-link " aria-current="page" href="/login">Login</a>
                         </li>
+                        @endguest
                     </ul>
                     <form action="/" method="GET" class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="search" id="search">
