@@ -25,6 +25,7 @@
             
                     <img src="/img/news/{{ $news->image }}" width="200" height="200" alt="" class="card-img-top">
                     <div class="card-body text-hidden">
+                    
                         <h5 class="card-title ">{{ $news->title }}</h5>
                         <h6 class="card-date">{{ date('d/m/Y', strtotime($news->created_at)) }}</h6>
                         <p class="card-text">

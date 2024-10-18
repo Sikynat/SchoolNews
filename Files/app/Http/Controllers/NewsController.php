@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\News;
+use App\Models\User;
 
 class NewsController extends Controller
 {
@@ -51,6 +52,9 @@ class NewsController extends Controller
             $news->image = $imageName;
         }
 
+        $user = auth()->user();
+        $news->user_id = $user->id;
+
         $news->save();
 
         return redirect('/');
@@ -59,7 +63,10 @@ class NewsController extends Controller
 
     public function show($id){
         $news = News::findOrFail( $id );
-        return view('news.show', ['news' => $news]);
+
+        $newsOwner = User::Where('id', $news->user_id)->first()->toArray();
+
+        return view('news.show', ['news' => $news, 'newsOwner' => $newsOwner]);
     }
 
 
