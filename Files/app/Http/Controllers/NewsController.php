@@ -70,4 +70,9 @@ class NewsController extends Controller
     }
 
 
+    public function dashboard() {
+        $user = auth()->user();
+        $news = $user->news;
+        return view('news.dashboard', ['news' => $news]);
+    }
 }

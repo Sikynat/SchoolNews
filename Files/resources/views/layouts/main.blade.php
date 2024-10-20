@@ -76,12 +76,12 @@
             @yield('content')
 
            
-        <footer class="bg-dark text-light py-4">
+        <footer class="container-fluid bg-dark text-light py-4">
             <div class="container px-4">
                 <div class="row">
                    <div class="col col-lg-4">
                         <h3>Jornal Escolar</h3>
-                        <p>Site desenvolvido por Bruna Dadonas</p>
+                        <p>Site desenvolvido por: Bruna Dadonas</p>
                         <p>Envolvidos no projeto: Ana Julia, Rafaela, Andriene e Leticia</p>
                        
                    </div>

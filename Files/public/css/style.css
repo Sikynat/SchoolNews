@@ -2,12 +2,32 @@
     font-family: 'poppins';
 }
 
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    height: 100%;
+}
+
 .text-hidden p {
     height: 100px;
     overflow: hidden;
 }
 
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-news-container th {
+    width: 25%;
+}
+
 footer {
-    position: absolute;
+    margin-top: auto;
+    
     width: 100%;
 }
