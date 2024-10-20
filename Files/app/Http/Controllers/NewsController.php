@@ -75,4 +75,9 @@ class NewsController extends Controller
         $news = $user->news;
         return view('news.dashboard', ['news' => $news]);
     }
+
+    public function destroy($id){
+        News::findOrFail($id)->delete();
+        return redirect('/dashboard');
+    }
 }

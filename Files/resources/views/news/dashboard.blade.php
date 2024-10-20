@@ -25,7 +25,14 @@
                
                 <td><a href="/news/{{ $news->id }}">{{ $news->title }}</a></td>
                 <td>{{ date('d/m/Y', strtotime($news->updated_at)) }}</td>
-                <td><a href="#">Editar</a> <a href="#">Deletar</a></td>
+                <td>
+                    <a href="#" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon>  Editar</a> 
+                    <form action="/news/{{ $news->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon>Deletar</button>
+                    </form>
+                </td>
 
                 @empty
                 <td>0</td>

@@ -26,6 +26,10 @@ html {
     width: 25%;
 }
 
+.dashboard-news-container form {
+    display: inline-block;
+}
+
 footer {
     margin-top: auto;
     
